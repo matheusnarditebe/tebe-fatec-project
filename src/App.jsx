@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Widget from "./components/Widget";
+import SpotItem from "./components/SpotItem";
 
 function App() {
   const API_KEY = "8mX7gZlFBm0bJ7jjhjg8atBpr5eGql72xYvIMpT4";
@@ -77,15 +78,13 @@ function App() {
         {spots && (
           <div className="spotsContainer">
             {spots.map((spot) => (
-              <div
+              <SpotItem
                 key={spot.spot_id}
-                className={`spotItem ${
-                  spot.spot_id === selectedSpotId ? "selectedSpot" : ""
-                }`}
+                spotId={spot.spot_id}
+                spotName={spot.spot_name}
+                selectedSpotId={selectedSpotId}
                 onClick={() => setSelectedSpotId(spot.spot_id)}
-              >
-                <p>{spot.spot_name}</p>
-              </div>
+              />
             ))}
           </div>
         )}

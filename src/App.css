@@ -18,22 +18,6 @@
   gap: 12px;
 }
 
-.spotItem {
-  display: flex;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  user-select: none;
-  &:hover {
-    background-color: #f9f9f9;
-  }
-  &:active {
-    background-color: #ececec;
-  }
-}
-
 .selectedSpot {
   border-color: #007bff;
   background-color: #e7f1ff;
