@@ -1,0 +1,26 @@
+.periodItem {
+  display: flex;
+  padding: 4px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+  &:hover {
+    background-color: #f9f9f9;
+  }
+  &:active {
+    background-color: #ececec;
+  }
+}
+
+.selectedPeriod {
+  border-color: #007bff;
+  background-color: #e7f1ff;
+  &:hover {
+    background-color: #d0e4ff;
+  }
+  &:active {
+    background-color: #b8d7ff;
+  }
+}
