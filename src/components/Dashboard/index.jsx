@@ -3,8 +3,6 @@ import Widget from "../Widget";
 import axios from "axios";
 import { API_KEY } from "../../constants";
 
-const now = (new Date().getTime() / 1000).toFixed(0); // data e hora em timestamp
-
 const Dashboard = ({ selectedSpotId }) => {
   const [spotData, setSpotData] = useState(null);
   const [loadingSpotData, setLoadingSpotData] = useState(true);
@@ -12,6 +10,7 @@ const Dashboard = ({ selectedSpotId }) => {
   const [avgSpotData, setAvgSpotData] = useState(null);
 
   useEffect(() => {
+    const now = (new Date().getTime() / 1000).toFixed(0);
     const startTime = now - 24 * 60 * 60;
     const endTime = now;
     const getSpotData = async () => {
